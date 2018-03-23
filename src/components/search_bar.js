@@ -1,6 +1,6 @@
+// Global Imports
 import React, { Component } from 'react';
 // { Component } is same as React.Component which comes after extend on ES6 Class
-
 
 // const SearchBar = () => {
 //     return <input />;
@@ -21,11 +21,11 @@ class SearchBar extends Component {
     
     render() {
         // return <input onChange={(e) => console.log(e.target.value)} />
-        // Must put "".bind(this)"" to bind context of "this" in onInputChange Method
+        // Must put "".bind(this)"" to bind context of "this" in the onInputChange Method
         // basically to use "this."
         return (
             <div>
-                {/* When Value is set to 'value={this.state.term}' what's happening is it looks at the term state and set it to what that is. In this case, it's blank. As the user starts to type the "onChange" method rerenders each change and then what was typed is setting the state therefor making the value equal to what was typed.  "Called Controlled Components where you receive the value from state" */}
+                {/* When Value is set to 'value={this.state.term}' what's happening is it looks at the term state and set it to what that is. In this case, it's blank. As the user starts to type the "onChange" method rerenders each change and then what was typed is setting the state therefor making the value equal to what was typed.  "It's called (Controlled Components) where you receive the value from state" */}
                 <input 
                     value={this.state.term}
                     onChange={this.onInputChange.bind(this)} 
