@@ -14,6 +14,7 @@ const VideoList = (props) => {
     // for each element of videos call a function with a single video. 
     //basically for each item in array.
     const videoItems = props.videos.map((video) => {
+        // console.log('video', video);
         return <VideoListItem key={video.etag} video={video}/>
     });
     

@@ -4,6 +4,7 @@ import React from 'react';
 const VideoListItem = (/*props*/ {video}) => {
     // const video = props.video;
     // ES6 is just the {video} which means we passed a property video. 
+    // ES5 could be anything like data. Then you'd do data.video
     const imageUrl = video.snippet.thumbnails.default.url;
     
     

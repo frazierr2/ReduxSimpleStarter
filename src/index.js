@@ -2,9 +2,11 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import YTSearch from 'youtube-api-search';
+
 // Local Imports
 import SearchBar from './components/search_bar';
 import VideoList from './components/video_list';
+import VideoDetail from './components/video_detail';
 
 const API_KEY = config.API_KEY;
 /*
@@ -22,7 +24,7 @@ responsible for fetching data.
 //         </div>
 //     );
 // }
-// Above is (Functional Component), Below is( Class Base Component)
+// Above is a example of (Functional Component), Below is a example of(Class Base Component)
 class App extends Component {
     constructor(props){
         super(props);
@@ -31,8 +33,8 @@ class App extends Component {
         //Now once page loads constructor will immediately fire with a list of videos instantiated below
         YTSearch({ key: API_KEY, term: 'golf' }, (videos) => {
             this.setState({ videos })
-            // When key and property are same with ES6 display it once like above. 
-            // Es5 version would be this.setState({ videos: videos })
+            // When key and property are same with ES6, you can simply put it once like above. 
+            // ES5 version would be this.setState({ videos: videos })
         });
     }
     
@@ -40,6 +42,7 @@ class App extends Component {
         return(
             <div>
                 <SearchBar />
+                <VideoDetail video={this.state.videos[0]}/>
                 <VideoList videos={this.state.videos}/> {/*passing "prop" videos (the State of videos) to VideoList*/}
             </div>
         );
