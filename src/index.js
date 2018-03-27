@@ -15,7 +15,6 @@ responsible for fetching data.
 */
 
 
-
 // Create new component. This component should produce some HTML.
 // const App = () => {
 //     return (
