@@ -3,7 +3,7 @@ import React from 'react';
 
 
 const VideoDetail = ( {video} ) => {
-    
+    // Since Video list state is empty on page load, then kicks off an API Call the DOM tries to load which we would get nothing eventually. To handle that we can check to see if no videos and if so add loading in the meantime while it waits for data from API Call 
     if (!video) {
         return <div> Loading... </div>;
     }

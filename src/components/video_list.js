@@ -10,12 +10,17 @@ import VideoListItem from './video_list_item';
     
     In an Class based component, props are defined in any method we define as "this.props"
 */
+
 const VideoList = (props) => {
     // for each element of videos call a function with a single video. 
     //basically for each item in array.
     const videoItems = props.videos.map((video) => {
         // console.log('video', video);
-        return <VideoListItem key={video.etag} video={video}/>
+        return <VideoListItem 
+            key={video.etag} 
+            video={video}
+            onVideoSelect = { props.onVideoSelect }
+            />
     });
     
     return (
