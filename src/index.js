@@ -46,7 +46,7 @@ class App extends Component {
         videos: videos,
         selectedVideo: videos[0]
       });
-      // When key and property are same with ES6, you can simply put it once like above.
+      // When key and property are same with ES6, you can simply put it once like above ({ videos }).
       // ES5 version would be this.setState({ videos: videos })
     });
   }
